@@ -1,0 +1,245 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/*
+
+Table of content 
+------
+
+    1.0) Global style
+    2.0) Conatiner
+        * Warapper
+
+*/
+
+/* Start Global style */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(273, 75%, 66%)), to(hsl(240, 73%, 65%)));
+    background-image: -o-linear-gradient(top, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-image: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+
+
+}
+/* End Global style */
+
+
+/* Start Container */
+    .container {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+
+        padding: 0px 15px;
+        margin: auto;
+
+    }
+    .wrapper {
+        position: relative;
+        width: 90%;
+        height: 500px;
+        background-color: #fff;
+        border-radius: 10px;
+
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+
+        overflow: hidden;
+        
+    }
+
+    .box-img {
+        position: absolute;
+        top: 0;
+        bottom: -115px;
+        left: -40px;
+        margin: auto;
+        z-index: 2;
+    }
+
+    .woman-img {
+        position:absolute;
+        top: 0;
+        bottom: 0;
+        left: -80px;
+        margin: auto;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+
+    .pattern-img {
+        width:90%;
+        position: absolute;
+        top: -55%;
+        left: -50%;
+    }
+
+    .wrapper-accordion {
+        width: 50%;
+        margin-right: 5%;
+    }
+
+    .wrapper-accordion h1 {
+
+        margin: 30px 0px;
+    }
+    
+    .accordion {
+        list-style-type: none;
+    }
+
+    .acc-link  {
+        width: 80%;
+        padding: 15px 0px;
+        border-bottom: 1px solid hsl(240, 5%, 91%);
+    }
+
+    .acc-link a{
+        display: block;
+        color: hsl(240, 6%, 50%);
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .acc-link a::after {
+        content: url('./images/icon-arrow-down.svg');
+        float: right;
+        margin-right: 5px;
+    }
+    .acc-content {
+        height:0;    
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+    }
+
+    .acc-link.active .acc-content {
+        height: 50px;
+        opacity: 1;
+        visibility: visible;
+        }
+
+    .acc-content p {
+        font-size: 14px;
+        color: hsl(240, 6%, 50%);
+        padding: 10px 0px;
+    }
+
+/* End Container */
+
+
+@media (min-width: 576px) {
+    .container {
+      width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      width: 960px;
+    }
+
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      width: 1140px;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .wrapper {
+        width: 100%;
+        overflow: unset;
+        height: auto;
+    }
+    .wrapper-accordion {
+
+        width: 100%;
+        text-align: center;
+        margin: 100px auto 50px auto ;
+    }
+
+    .acc-link {
+        margin: auto;
+    }
+
+    .acc-link a {
+        font-size: 14px;
+    }
+
+    .woman-img {
+
+        width: 70%;
+        top: -110px;
+        bottom: unset;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }   
+
+    .pattern-img {
+        width: 70%;
+        top: -130px;
+        left: 50px;
+    }
+
+    .box-img {
+        width: 25%;
+        top: 105px;
+        left: 60px;
+        bottom: unset;
+    }
+}
